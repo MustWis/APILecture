@@ -7,7 +7,7 @@ const WeatherApp = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Replace 'YOUR_API_KEY' with your actual API key from OpenWeatherMap
+    
     const api_key = "90ccd00d144edbd275a6c90e474b4660";
     const city = "Istanbul";
     const lang = "tr";
@@ -36,6 +36,7 @@ const WeatherApp = () => {
       ) : (
         <div>
           <p>Temperature: {weatherData.main.temp}°C</p>
+          <p>Humidity: {weatherData.main.humidity}%</p>
           <p>Description: {weatherData.weather[0].description}</p>
         </div>
       )}
